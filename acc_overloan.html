@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>overLoan Account information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/bootstrap.css">
+    <link rel="stylesheet" href="./assets/style/all.css">
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  </head>
+
+  <body>
+    <header class="container">
+      <h2 class="text-center ">
+          <a href="./index.html" class="display-2 text-black fw-bold">統
+              <img src="./assets/images/logo_tmp.png" alt="company logo">
+              貸
+          </a>
+      </h2>
+  </header>
+
+    
+<main>
+    <section class="container">
+        <div class="card">
+            <div class="card-header bg-white d-flex justify-content-end">
+                <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class=" card-body">
+                <h5 class="card-title">您申請的借款金額<span id="loanNum-over"></span>元，要使用哪些庫存作為擔保品？</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center ">
+                        <thead class="bg-primary">
+                            <tr>
+                                <th scope="col" colspan="3">可作為擔保品的庫存明細</th>
+                                <th scope="col" rowspan="2" class="align-middle bg-light-blue">融通成數</th>
+                                <th scope="col" rowspan="2" class="align-middle bg-secondary">擔保品張數</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">股票代號</th>
+                                <th scope="col">股票名稱</th>
+                                <th scope="col">張數</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stock-list">
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" class="text-end bg-light-pink">可增加融通額度：<span id="loan-quota"></span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="text-end">
+                    <button class="btn btn-success text-center " id="overloan-btn-submit">下一步</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+     // close accinfo
+     let accinfo_close = document.getElementsByClassName('btn-close');
+    // console.log(accinfo_close)
+    for (let i in accinfo_close) {
+        accinfo_close[i].onclick = () => {
+            accinfo_close[i].parentElement.parentElement.parentElement.classList.add('close-acc');
+        }
+    }
+</script>
+
+    
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

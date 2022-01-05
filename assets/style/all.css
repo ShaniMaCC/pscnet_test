@@ -12553,9 +12553,13 @@ ul {
   width: 200px;
 }
 
-.active-ioan {
+.active-loan {
   background-color: #f9923d !important;
   color: #fff !important;
+}
+
+.close-acc {
+  display: none;
 }
 
 /*# sourceMappingURL=all.css.map */
